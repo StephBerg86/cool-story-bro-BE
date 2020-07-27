@@ -5,16 +5,7 @@ const Story = require("../models").story;
 
 const router = new Router();
 
-router.get("/homepages", async (req, res, next) => {
-  try {
-    const homepages = await Homepage.findAll();
-    res.json(homepages);
-  } catch (e) {
-    next(e);
-  }
-});
-
-router.patch("/:id", auth, async (req, res) => {
+router.patch("homepages/:id", auth, async (req, res) => {
   const homepage = await Homepage.findByPk(req.params.id);
   if (!homepage.userId === req.user.id) {
     return res
@@ -29,7 +20,7 @@ router.patch("/:id", auth, async (req, res) => {
   return res.status(200).send({ homepage });
 });
 
-router.post("/:id/stories", auth, async (req, res) => {
+router.post("/homepages/:id/stories", auth, async (req, res) => {
   const homepage = await Homepage.findByPk(req.params.id);
   console.log(homepage);
 
@@ -59,7 +50,7 @@ router.post("/:id/stories", auth, async (req, res) => {
   return res.status(201).send({ message: "Story created", story });
 });
 
-router.get("/", async (req, res) => {
+router.get("/homepages", async (req, res) => {
   const limit = req.query.limit || 10;
   const offset = req.query.offset || 0;
   const homepages = await Homepage.findAndCountAll({
@@ -71,7 +62,7 @@ router.get("/", async (req, res) => {
   res.status(200).send({ message: "ok", homepages });
 });
 
-router.get("/:id", async (req, res) => {
+router.get("/homepages/:id", async (req, res) => {
   const { id } = req.params;
 
   console.log(id);
