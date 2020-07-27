@@ -4,20 +4,11 @@
     "dialect": "postgres",
     "operatorsAliases": "0"
   },
-  "test": {
-    "username": "root",
-    "password": null,
-    "database": "database_test",
-    "host": "127.0.0.1",
-    "dialect": "postgres",
-    "operatorsAliases": "0"
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node index.js"
   },
   "production": {
-    "username": "root",
-    "password": null,
-    "database": "database_production",
-    "host": "127.0.0.1",
-    "dialect": "postgres",
-    "operatorsAliases": "0"
+    "use_env_variable": "DATABASE_URL"
   }
 }
