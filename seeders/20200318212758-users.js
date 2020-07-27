@@ -3,7 +3,7 @@ const bcrypt = require("bcrypt");
 const { SALT_ROUNDS } = require("../config/constants");
 
 module.exports = {
-  up: async (queryInterface, Sequelize) => {
+  up: (queryInterface, Sequelize) => {
     return queryInterface.bulkInsert(
       "users",
       [
@@ -16,8 +16,8 @@ module.exports = {
         },
         {
           name: "dummy",
-          email: "a@a.com",
-          password: bcrypt.hashSync("a", SALT_ROUNDS),
+          email: "dummy@dummy.com",
+          password: bcrypt.hashSync("dummy1234", SALT_ROUNDS),
           createdAt: new Date(),
           updatedAt: new Date(),
         },
