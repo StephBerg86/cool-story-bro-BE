@@ -9,6 +9,9 @@ module.exports = {
     const homepage2 = await Homepage.findOne({
       where: { title: "In a land down under" },
     });
+    const homepage3 = await Homepage.findOne({
+      where: { title: "Living the Brazilian life" },
+    });
 
     return queryInterface.bulkInsert(
       "stories",
@@ -50,6 +53,16 @@ module.exports = {
           content:
             "Lorem ipsum dolor sit amet, consectetur adipiscing elit. In a metus et ante venenatis varius ac id lorem. Vivamus dapibus convallis lacus in semper. Cras finibus mi at libero placerat laoreet. Nam quis tristique ante, quis dignissim velit. Sed consectetur magna quam, ut posuere est porta quis. Nam venenatis at dolor ut rutrum. Aenean accumsan convallis ex at pellentesque. Nam vitae felis cursus odio condimentum tincidunt. Aliquam tristique consequat odio id placerat. Suspendisse varius, felis quis rutrum sollicitudin, felis turpis convallis urna, vitae posuere augue leo luctus nisl. Etiam interdum neque sit amet neque mollis, eget mollis turpis lacinia. Quisque porta, neque et sodales luctus, sapien nulla hendrerit elit, at imperdiet nisi mauris id elit. Mauris dignissim tortor diam, sed accumsan neque gravida quis. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus fringilla pretium augue eget sodales. In quis condimentum elit. Nullam in auctor tortor, eu gravida augue. Suspendisse.",
           homepageId: homepage2.id,
+          createdAt: new Date(),
+          updatedAt: new Date(),
+        },
+        {
+          name: "Carnaval in SambaDrome",
+          imageUrl:
+            "https://magazine.zarpo.com.br/wp-content/uploads/2019/01/carnaval_zarpo.jpg",
+          content:
+            "Lorem ipsum dolor sit amet, consectetur adipiscing elit. In a metus et ante venenatis varius ac id lorem. Vivamus dapibus convallis lacus in semper. Cras finibus mi at libero placerat laoreet. Nam quis tristique ante, quis dignissim velit. Sed consectetur magna quam, ut posuere est porta quis. Nam venenatis at dolor ut rutrum. Aenean accumsan convallis ex at pellentesque. Nam vitae felis cursus odio condimentum tincidunt. Aliquam tristique consequat odio id placerat. Suspendisse varius, felis quis rutrum sollicitudin, felis turpis convallis urna, vitae posuere augue leo luctus nisl. Etiam interdum neque sit amet neque mollis, eget mollis turpis lacinia. Quisque porta, neque et sodales luctus, sapien nulla hendrerit elit, at imperdiet nisi mauris id elit. Mauris dignissim tortor diam, sed accumsan neque gravida quis. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus fringilla pretium augue eget sodales. In quis condimentum elit. Nullam in auctor tortor, eu gravida augue. Suspendisse.",
+          homepageId: homepage3.id,
           createdAt: new Date(),
           updatedAt: new Date(),
         },

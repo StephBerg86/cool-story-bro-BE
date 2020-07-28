@@ -25,6 +25,15 @@ module.exports = {
           updatedAt: new Date(),
           userId: 2,
         },
+        {
+          title: "Living the Brazilian life",
+          description: "Carnaval and soccer at the Copa Cabana",
+          backgroundColor: "#00838F",
+          color: "#E57373",
+          createdAt: new Date(),
+          updatedAt: new Date(),
+          userId: 3,
+        },
       ],
       {}
     );
