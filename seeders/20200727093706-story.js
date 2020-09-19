@@ -4,13 +4,13 @@ const Homepage = require("../models").homepage;
 module.exports = {
   up: async (queryInterface, Sequelize) => {
     const homepage1 = await Homepage.findOne({
-      where: { title: "My trip to Japan" },
+      where: { title: "Michael's page" },
     });
     const homepage2 = await Homepage.findOne({
-      where: { title: "In a land down under" },
+      where: { title: "Simons super page" },
     });
     const homepage3 = await Homepage.findOne({
-      where: { title: "Living the Brazilian life" },
+      where: { title: "Kim online" },
     });
 
     return queryInterface.bulkInsert(
@@ -21,7 +21,7 @@ module.exports = {
           imageUrl:
             "https://img.travelinsurance.com.au/images/default-source/default-album/eating-and-drinking-in-japan.jpg",
           content:
-            "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse purus felis, interdum a consequat sit amet, lacinia id enim. Suspendisse non massa quis nulla aliquet finibus at sit amet mauris. Integer pretium dictum felis, tincidunt viverra lacus maximus ac. Etiam eleifend commodo sapien, non facilisis leo. Cras commodo ex ut venenatis blandit. Vivamus sed auctor nunc. Suspendisse a erat eget erat tempor elementum a at tortor. Proin dignissim, massa vitae mattis tempor, arcu enim pellentesque lectus, sed rutrum quam ex quis odio. In libero velit, tristique ut tristique aliquam, scelerisque eu nunc. Fusce id ligula volutpat justo tempus pulvinar. Etiam non cursus ante. Nam rhoncus at orci in tempor. Etiam accumsan a lacus sit amet commodo. Duis viverra nunc eget ex fermentum scelerisque. Nulla fringilla velit et mauris mattis fermentum. Praesent a leo et orci tincidunt consectetur vitae vitae risus. Donec ex magna, varius et luctus et, suscipit eu lacus. Donec consequat sapien id quam rhoncus finibus. Integer rutrum, arcu eu congue vestibulum, lectus nunc dignissim odio, vitae facilisis metus risus a nunc. Cras molestie quam quis metus ornare pretium a in orci. Phasellus sed blandit lacus, vitae faucibus nulla. Nullam non fermentum eros. Interdum et malesuada fames ac ante.",
+            "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse purus felis, interdum a consequat sit amet, lacinia id enim. Suspendisse non massa quis nulla aliquet finibus at sit amet mauris. Integer pretium dictum felis, tincidunt viverra lacus maximus ac. Etiam eleifend commodo sapien, non facilisis leo. Cras commodo ex ut venenatis blandit. Vivamus sed auctor nunc. Suspendisse a erat eget erat tempor elementum a at tortor. Proin dignissim, massa vitae mattis tempor, arcu enim pellentesque lectus, sed rutrum quam ex quis odio. In libero velit, tristique ut tristique aliquam, scelerisque eu nunc. Fusce id ligula volutpat justo tempus pulvinar. Etiam non cursus ante. Nam rhoncus at orci in tempor. Etiam accumsan a lacus sit amet commodo. Duis viverra nunc eget ex fermentum scelerisque. Nulla fringilla velit et mauris mattis fermentum. Praesent a leo et orci tincidunt consectetur vitae vitae risus.",
           homepageId: homepage1.id,
           createdAt: new Date(),
           updatedAt: new Date(),
